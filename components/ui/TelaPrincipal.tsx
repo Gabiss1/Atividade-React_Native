@@ -9,7 +9,6 @@ export function TelaPrincipal(props: {
     title: string,
     description: string
 }){
-    const nav = useNavigation<HomeScreenProp>()
 
     return (
         <View>
@@ -19,12 +18,7 @@ export function TelaPrincipal(props: {
                 {props.description}
             </Text>
 
-            <Pressable  onPress={() =>
-          nav.navigate('Detalhes', {
-            title: 'Cardigan',
-            descricao: 'Assume iunou nofing'
-          })
-            }>
+            <Pressable>
                 <Text>Abrir  site</Text>
             </Pressable>
         </View>

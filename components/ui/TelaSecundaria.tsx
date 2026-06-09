@@ -1,11 +1,19 @@
-import { RouteProp } from "@react-navigation/native"
-import { View } from "react-native"
-import { RootStackParamList } from './types';
+import { View, Text } from "react-native"
 
-type DetalhesScreenRouteProp = RouteProp<RootStackParamList, 'Detalhes'>
+type Props = {
+    title: string,
+    description: string
+}
 
-export function TelaSecundaria() {
+export function TelaSecundaria(props: Props) {
     return (
-        <View></View>
+        <View>
+            <Text>
+                {props.title}
+            </Text>
+            <Text>
+                {props.description}
+            </Text>
+        </View>
     )
 }
